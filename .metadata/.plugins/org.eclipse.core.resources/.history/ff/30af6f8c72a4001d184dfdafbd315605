@@ -1,0 +1,45 @@
+package edu.javacourse.city.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import edu.javacourse.city.domain.PersonRequest;
+import edu.javacourse.city.domain.PersonResponse;
+import edu.javacourse.city.exeption.PersonCheckException;
+
+public class PersonCheckDao {
+
+	private static final String SQL_REQUEST = "select temporal, upper(p.sur_name), upper('Васильев') from cr_address_person ap\r\n" + 
+			"inner join cr_person p on p.person_id = ap.person_id\r\n" + 
+			"inner join cr_address a on a.address_id = ap.address_id\r\n" + 
+			"where\r\n" + 
+			"p.sur_name = 'Васильев' and p.given_name = 'Павел' and patronymic = 'Николаевич' and p.date_of_birth = '1995-03-18'\r\n" + 
+			"and a.street_code = 1 and a.building = '10' and extension  = '2' and a.apartment = '121'";
+
+	public PersonResponse checkPerson(PersonRequest request) throws PersonCheckException {
+		PersonResponse response = new PersonResponse();
+		
+		try (Connection con = getConnection();
+				PreparedStatement stmt = con.prepareStatement(SQL_REQUEST)) {
+			
+			 ResultSet rs = stmt.executeQuery();
+			 if (rs.next()) {
+	                response.setRegistered(true);
+	                response.setTemporal(rs.getBoolean("temporal"));
+	            }
+			
+		} catch (SQLException ex) {
+			throw new PersonCheckException(ex);
+		}
+
+		return response;
+
+	}
+
+	private Connection getConnection() throws SQLException {
+		return null;
+	}
+
+}

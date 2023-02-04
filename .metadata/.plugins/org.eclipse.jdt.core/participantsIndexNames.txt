@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+C:\workspase laptop\ext-systems\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1881847329.index
+\city-register\src\main\resources

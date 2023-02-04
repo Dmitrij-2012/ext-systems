@@ -1,0 +1,8 @@
+package edu.javacourse.city.domain;
+
+public class PersonResponse {
+	
+	 private boolean registered;
+	    private boolean temporal;
+
+}

@@ -1,0 +1,27 @@
+package edu.javacourse.city.dao;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import edu.javacourse.city.domain.PersonRequest;
+import edu.javacourse.city.domain.PersonResponse;
+import edu.javacourse.city.exeption.PersonCheckException;
+
+public class PersonCheckDao {
+
+	public PersonResponse checkPerson(PersonRequest request) throws PersonCheckException {
+		PersonResponse response = new PersonResponse();
+		try (Connection con = getConnection();) {
+		} catch (SQLException ex) {
+
+		}
+
+		return response;
+
+	}
+
+	private Connection getConnection() throws SQLException {
+		return null;
+	}
+
+}
