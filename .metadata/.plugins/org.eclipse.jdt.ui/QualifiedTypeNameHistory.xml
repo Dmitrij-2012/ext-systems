@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.time.LocalDate"/>
-<fullyQualifiedTypeName name="edu.javacourse.city.domain.PersonResponse"/>
-<fullyQualifiedTypeName name="edu.javacourse.city.domain.PersonRequest"/>
-<fullyQualifiedTypeName name="edu.javacourse.city.exeption.PersonCheckException"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="edu.javacourse.city.exeption.PersonCheckException"/>
+<fullyQualifiedTypeName name="edu.javacourse.city.domain.PersonRequest"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="edu.javacourse.city.domain.PersonResponse"/>
+<fullyQualifiedTypeName name="org.junit.Assert"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
 </qualifiedTypeNameHistroy>
